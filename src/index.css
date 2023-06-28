@@ -1,13 +1,254 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img{
+    width: 100%;
+    height: auto;
+}
+
+button{
+    outline: 0;
+    border: 0 ;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: ghostwhite;
+    box-shadow: 0px 1px 1px lightgray;
+}
+
+nav .logo{
+    width: 50px;
+    height: 50px;
+}
+
+nav .search{
+    padding: 5px 7px;
+}
+
+nav .nav-links button{
+    margin-right: 15px;
+    font-size: 20px;
+    padding: 5px 7px;
+}
+
+nav .nav-links button:nth-child(4){
+    margin: 0;
+}
+
+.bio{
+    margin: 0 auto;
+    width: 75%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 300px;
+}
+
+.profile-photo{
+    width: 30%;
+}
+
+.profile-photo img{
+    width: 150px ;
+    height: 150px;
+    border-radius: 50% ;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+}
+
+.profile-info{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+}
+
+.profile-info .name{
+    font-size: 28px;
+}
+
+.profile-info .about{
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.profile-info button{
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(63, 63, 240);
+}
+
+.edit-bio-form input{
+    padding: 10px 12px;
+    margin-top: 10px;
+    display: block;
+    width: 50%;
+}
+
+.edit-bio-form .cancel-btn, .edit-bio-form .save-btn, .gallery .delete-btn{
+    background-color: crimson;
+    padding: 8px 10px;
+    color: white;
+}
+
+.edit-bio-form .save-btn{
+    background-color: green ;
+    margin-left: 12px ;
+}
+
+.add-photo-btn{
+    font-size: 40px;
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+}
+
+.gallery-section{
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 15px;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.gallery .item{
+    height: 250px;
+    /* width: 250px;   */
+    position: relative;
+}
+
+.gallery .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery .item img:hover{
+    opacity: .6;  
+  }
+  
+
+.gallery .item button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+}
+
+
+@media only screen and (max-width:700px){
+    
+nav{
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+nav .logo{
+    width: 35px;
+    height: 35px;
+}
+
+nav .search{
+    padding: 5px;
+}
+
+nav .nav-links button{
+    margin-right: 12px;
+    font-size: 15px;
+    background-color: transparent;
+}
+
+
+.bio{
+    width: 85%;
+    justify-content: space-between;
+}
+
+.profile-photo img{
+    width: 110px;
+    height: 110px;
+}
+
+.profile-info{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 60%;
+}
+
+.profile-info .name{
+    font-size: 1.1rem;
+}
+
+.profile-info .about{
+    font-size: .9rem;
+}
+
+.profile-info button{
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+.edit-bio-form input{
+    width: 80%;
+    padding: 7px 10px;  
+}
+
+.edit-bio-form .cancel-btn, .edit-bio-form .save-btn, .gallery .delete-btn{
+    padding: 7px 9px;
+}
+
+
+.add-photo-btn{
+    right: 35px;
+    bottom: 25px;
+    z-index: 100;
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+
+.gallery-section{
+    width: 85%;
+}
+
+.gallery{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .9rem;
+}
+
+.gallery .item{
+    height: 200px;
+}
+
+.gallery .item img:hover{
+    opacity: .85;  
+  }
+  
+
+.gallery .item button{
+    position: absolute;
+    border-radius: .5rem;
+    top: 50%;
+    left: 50%;
+    border: 0;
+}
+
+
+.gallery .item button:hover{
+    color: crimson;
+    background-color: white;
+    border: 1px solid crimson;
+}
+
+
 }
